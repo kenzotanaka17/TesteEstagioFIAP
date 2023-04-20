@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+@font-face {
+    font-family: GothamHTF-Bold;
+    src: url(../fonts/GothamHTF-Bold.otf);
+}
+
+@font-face {
+    font-family: GothamHTF-M;
+    src: url(../fonts/GothamHTF-Medium.otf);
+}
+
+:root {
+    --preto: #000000;
+    --magenta: #ED145B;
+    --cinzaclaro: #91A3AD;
+    --cinzaescuro: #32383B;
+    --cinza: #616D72;
+}
+
+section {
+    background-color: #000000;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 90px;
+    align-items: center;
+    background-color:   #151819;
+    font-family: GothamHTF-M;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+
+.div-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 30px;
+}
+
+.menuItem {
+    text-decoration: none;
+    color:var(--cinzaclaro) ;
+    padding: 0 30px;
+}
+
+.logo {
+    position: absolute;
+    top: 24px;
+    height: 45px;
+    left: 19.5%;
+}
+
+.sub {
+    position: absolute;
+    width: 150px;
+    left: 75.5%;  
+    top: 26px;
+    background-color: transparent;
+    border: 2px solid var(--magenta);
+    color: var(--magenta);
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 13px;
+    letter-spacing: 0.05em;
+    align-items: center;
+
+}
+
+.sub:hover {
+    color: white;
+    background-color: var(--magenta);
+}
+
+.maincontainer {
+    min-height: 100vh;
+    background-image:url(../images/header.png);
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: #91A3AD;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.maincontainer a {
+    margin: 3%;
+}
+
+.btn {
+    padding: 10px;
+    border: 2px solid;
+    font-size: 12px;
+    position: static;
+    width: 180px;
+    height: 40px;
+    left: 870px;
+    top: 612px;
+    background-color: transparent;
+    color: var(--magenta);
+    list-style: none;
+    text-decoration: none; 
+    font-family: GothamHTF-M;   
+}
+
+.btn:hover {
+    background-color: var(--magenta);
+    border: 2px solid var(--magenta);
+    color: white;
+}
+
+.curso {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.sobre {
+    position: absolute;
+    width: 25%;
+    height: 54px;
+    left: 19.5%;
+    font-size: 50px;
+    flex-direction: column;
+    color: var(--cinzaescuro);
+}
+
+
+.title {
+    color: var(--cinzaclaro);
+    font-size: 45px;
+    line-height: 50px;
+    font-weight: 500;
+    margin-bottom: 2vh;
+    font-family: GothamHTF-M;
+}
+
+.title2 {
+    margin-top: 4vh;
+    margin-bottom: 3vh;
+    font-family: GothamHTF-M;
+}
+
+.subtitle {
+    color: var(--cinza);
+    font-size: 35px;
+    line-height: 40px;
+    font-weight: 500;
+    margin-bottom: 8vh;
+    font-family: GothamHTF-M;
+}
+
+.info {
+    position: absolute;
+    width: 25%;
+    height: 20px;
+    left: 55.5%;
+    color: var(--magenta);
+    flex-direction: column;
+}
+
+.info h2 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.infos {
+    font-size: 16px;
+    color: var(--cinzaclaro);
+    line-height: 30px;
+    margin-top: 4%;
+    font-family: Roboto;
+}
+
+.infos2 {
+    font-size: 16px;
+    color: var(--cinza);
+    line-height: 30px;
+    margin-top:4%;
+    margin-left: 4%;
+    font-family: Roboto;
+}
+
+.accor {
+    min-height: 55vh;
+    text-align: center;
+}
+
+.accordion {
+    position: absolute;
+    width: 55%;
+    left: 21%;
+}
+
+.accordion li {
+    list-style: none;
+    width: 100%;
+    margin: 2%;
+    padding: 10px;
+    background-color: #000000;
+}
+
+.accordion li label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+label::after {
+    content: '+';
+    color: var(--magenta);
+    border: 1px solid var(--magenta);
+    border-radius: 50%;
+    font-size: 50px;
+    font-weight: 100; 
+}
+
+input[type='radio'] {
+    display: none;
+}
+
+.accordion .conteudo {
+    color: var(--cinza);
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s, padding 0.2s ;
+}
+
+.accordion input[type='radio']:checked + label + .conteudo {
+    max-height: 400px;
+    padding: 10px 10px 20px;
+} 
+
+.accordion input[type='radio']:checked + label::after{
+    content: '-';
+    color: var(--magenta);
+    border: 1px solid var(--magenta);
+    border-radius: 50%;
+    font-size: 90px;
+    font-weight: 100; 
+}
+
+.border {
+    border: 1px var(--cinza) solid;
+}
+
+.conteudo {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--cinzaescuro);
+    font-family: GothamHTF-Bold;
+}
+
+.icon {
+    color: var(--cinzaclaro);
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 35px;
+}
+
+.label-title {
+    line-height: 5px;
+    font-size: 15px;
+    inline-size: 150px;
+}
+
+.table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--cinzaclaro);
+    flex-direction: column;
+}
+
+table {
+    margin-top: 7vh;
+    border-collapse: collapse;
+    text-transform: uppercase;
+}
+
+#campusT {
+    width: 20vh;
+}
+
+#diasT {
+    width: 28vh;
+}
+
+th{
+    border: 1px solid var(--cinzaclaro);
+    padding: 30px;
+    font-family: GothamHTF-Bold;
+    font-size: 1rem;
+}
+
+td {
+    border: 1px solid var(--cinzaclaro);
+    padding: 30px;
+    font-size: 0.7rem;
+    font-family: Roboto;
+}
+
+.unidade {
+    color: var(--magenta);
+    font-size: 1rem;
+}
+
+.mensalidade {
+    font-size: 1rem;
+}
+
+#turma {
+    min-height: 100vh;
+}
+
+.lastbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
